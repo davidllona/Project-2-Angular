@@ -1,3 +1,5 @@
+
+
 <div>
   {{ currentDate | date : "dd/MM/yyyy hh:mm:ss a" }}
 
@@ -16,7 +18,7 @@
     </thead>
     <tbody>
       <!-- En el archivo exercise3.component.html -->
-      <tr *ngFor="let transaction of sortTransactions()">
+      <tr *ngFor="let transaction of sortTransactions()" (click)="viewDetails(transaction.id)">
         <td>{{ transaction.id }}</td>
         <td>{{ transaction.label }}</td>
         <td>{{ transaction.amount }}</td>
