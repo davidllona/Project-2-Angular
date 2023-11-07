@@ -1,0 +1,32 @@
+<div>
+    {{ currentDate | date: 'dd/MM/yyyy hh:mm:ss a' }}
+    <h2>Transaction Details</h2>
+    <table>
+      <tr>
+        <th>ID</th>
+        <td>{{ transactionDetails?.id }}</td>
+      </tr>
+      <tr>
+        <th>Amount</th>
+        <td>{{ transactionDetails?.amount }}</td>
+      </tr>
+      <tr>
+        <th>Balance</th>
+        <td>{{ transactionDetails?.balance }}</td>
+      </tr>
+      <tr>
+        <th>Label</th>
+        <td>{{ transactionDetails?.label }}</td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>{{ transactionDetails?.description }}</td>
+      </tr>
+      <tr>
+        <th>Date</th>
+        <td>{{ transactionDetails?.date }}</td>
+      </tr>
+      <!-- Agrega más detalles según sea necesario -->
+    </table>
+  </div>
+  

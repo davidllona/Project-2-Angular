@@ -1,0 +1,28 @@
+<div>
+  {{ currentDate | date : "dd/MM/yyyy hh:mm:ss a" }}
+
+  <button class="btn btn-primary" (click)="changeSortBy('id')">Order by ID</button>
+<button class="btn btn-primary" (click)="changeSortBy('label')">Order by Label</button>
+<button class="btn btn-primary" (click)="changeSortBy('amount')">Order by Amount</button>
+
+
+  <table>
+    <thead>
+      <tr>
+        <th sortable="id">ID</th>
+        <th sortable="label">Label</th>
+        <th sortable="amount">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- En el archivo exercise3.component.html -->
+      <tr *ngFor="let transaction of sortTransactions()">
+        <td>{{ transaction.id }}</td>
+        <td>{{ transaction.label }}</td>
+        <td>{{ transaction.amount }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+

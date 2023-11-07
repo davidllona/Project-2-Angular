@@ -1,0 +1,28 @@
+<div>
+    <h1 [style.font-family]="selectedFont" [style.font-size]="fontSize" [style.text-align]="getAlignment()">
+      Hello {{ userName.toUpperCase() }}!
+    </h1>
+    <div>
+      <label for="userName">Enter your name:</label>
+      <input type="text" id="userName" [(ngModel)]="userName" />
+    </div>
+    <div>
+      <label for="fontName">Font:</label>
+      <select id="fontName" [(ngModel)]="selectedFont">
+        <option value="Arial">Arial</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Verdana">Verdana</option>
+      </select>
+    </div>
+    <div>
+      <label for="fontSize">Font Size:</label>
+      <input type="text" id="fontSize" [(ngModel)]="fontSize" />
+    </div>
+    <div>
+      <label for="alignment">Alignment:</label>
+      <input type="checkbox" id="leftAlignment" [(ngModel)]="leftAlign" /> Left
+      <input type="checkbox" id="centerAlignment" [(ngModel)]="centerAlign" /> Center
+      <input type="checkbox" id="rightAlignment" [(ngModel)]="rightAlign" /> Right
+    </div>
+  </div>
+  
